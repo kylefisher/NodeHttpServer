@@ -1,0 +1,254 @@
+html {
+    -webkit-text-size-adjust: none; /* Prevent font scaling in landscape */
+}
+
+body
+{
+    font-family: Calibri, Tahoma, Arial, sans-serif;
+    background-color: #EEEEEE;
+    background-image: url('../images/iron_grip_bg.png');
+    background-repeat: repeat;
+    color: black;
+    margin: 1em;
+    height: 100%;
+}
+
+#container {
+    display: none;
+    background-color: white;
+    height: 100%;
+    padding: 1em 1em 1em 1em;
+    margin: 0px 0px 0px 0px;
+    border-radius: 6px;
+    box-shadow: 10px 10px 10px #000;
+    border: solid 1px #AAA;
+}
+
+#application {
+    margin: 0;
+    padding: 0;
+}
+
+#footer {
+    margin-top: 1em;
+    padding-top: 0.5em;
+    border-top: solid 1px #EEEEEE;
+    font-size: small;
+    text-align: center;
+}
+
+#error {
+    padding: 1em;
+    margin-bottom: 1em;
+    border: solid 1px #400000;
+    border-radius: 6px;
+    color: white;
+    background-color: #d90000;
+    text-align: center;
+}
+
+.view {
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
+}
+
+h1 { font-size: 16pt; }
+h1 span { font-style: italic; }
+
+.critical {
+    background-color: #AA0000;
+    color: white;
+}
+
+.warning {
+    background-color: #CCCC00;
+}
+
+.splitLoad {
+    background-color: #FF6600;
+}
+
+
+/*
+ * Grid View Styles
+ */
+#gridView table { width: 100%; text-align: center; border-collapse: collapse; }
+#gridView table tr {  height: 2em; border-bottom: solid 1px white; }
+#gridView table tr:nth-child(even) { background-color: #eee; }
+#gridView table td { border-left: 0; border-right: 0;  border-radius: 6px; }
+#gridView table tbody tr:hover {
+    cursor: hand;
+    cursor: pointer;
+    background-color: #bbb;
+}
+#gridView select {
+    display: block;
+    width: 100%;
+}
+
+/*
+ * Detail View Styles
+ */
+
+#detailView table {
+    width: 100%;
+    text-align: left;
+    border-collapse: collapse;
+}
+
+#detailView table tr {  height: 2em; }
+
+#detailView label {
+    cursor: hand;
+    cursor: pointer;
+    display: block;
+}
+
+#detailView .actions {
+    border-top: solid 1px #EEEEEE;
+    padding-top: 0.5em;
+}
+
+#detailView #loadButton {
+    cursor: hand;
+    cursor: pointer;
+    -moz-box-shadow:inset 0px 1px 0px 0px #c1ed9c;
+    -webkit-box-shadow:inset 0px 1px 0px 0px #c1ed9c;
+    box-shadow:inset 0px 1px 0px 0px #c1ed9c;
+    background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #9dce2c), color-stop(1, #8cb82b) );
+    background:-moz-linear-gradient( center top, #9dce2c 5%, #8cb82b 100% );
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#9dce2c', endColorstr='#8cb82b');
+    background-color:#9dce2c;
+    -moz-border-radius:6px;
+    -webkit-border-radius:6px;
+    border-radius:6px;
+    border:1px solid #83c41a;
+    display:inline-block;
+    color:#ffffff;
+    font-family:arial;
+    font-size:15px;
+    font-weight:bold;
+    padding:6px 24px;
+    text-decoration:none;
+    text-shadow:1px 1px 0px #689324;
+}
+#detailView #loadButton:hover {
+     background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #8cb82b), color-stop(1, #9dce2c) );
+     background:-moz-linear-gradient( center top, #8cb82b 5%, #9dce2c 100% );
+     filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#8cb82b', endColorstr='#9dce2c');
+     background-color:#8cb82b;
+}
+#detailView #loadButton:active {
+      position:relative;
+      top:1px;
+}
+
+#detailView #cancelButton {
+    cursor: hand;
+    cursor: pointer;
+    -moz-box-shadow:inset 0px 1px 0px 0px #ffffff;
+    -webkit-box-shadow:inset 0px 1px 0px 0px #ffffff;
+    box-shadow:inset 0px 1px 0px 0px #ffffff;
+    background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #ededed), color-stop(1, #dfdfdf) );
+    background:-moz-linear-gradient( center top, #ededed 5%, #dfdfdf 100% );
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ededed', endColorstr='#dfdfdf');
+    background-color:#ededed;
+    -moz-border-radius:6px;
+    -webkit-border-radius:6px;
+    border-radius:6px;
+    border:1px solid #dcdcdc;
+    display:inline-block;
+    color:#777777;
+    font-family:arial;
+    font-size:15px;
+    font-weight:bold;
+    padding:6px 24px;
+    text-decoration:none;
+    text-shadow:1px 1px 0px #ffffff;
+}
+
+#detailView #cancelButton:hover {
+     background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #dfdfdf), color-stop(1, #ededed) );
+     background:-moz-linear-gradient( center top, #dfdfdf 5%, #ededed 100% );
+     filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#dfdfdf', endColorstr='#ededed');
+     background-color:#dfdfdf;
+}
+
+#detailView #cancelButton:active {
+      position:relative;
+      top:1px;
+}
+
+
+#detailView #checkOutButton {
+    -moz-box-shadow:inset 0px 1px 0px 0px #bbdaf7;
+    -webkit-box-shadow:inset 0px 1px 0px 0px #bbdaf7;
+    box-shadow:inset 0px 1px 0px 0px #bbdaf7;
+    background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #79bbff), color-stop(1, #378de5) );
+    background:-moz-linear-gradient( center top, #79bbff 5%, #378de5 100% );
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#79bbff', endColorstr='#378de5');
+    background-color:#79bbff;
+    -moz-border-radius:6px;
+    -webkit-border-radius:6px;
+    border-radius:6px;
+    border:1px solid #84bbf3;
+    display:inline-block;
+    color:#ffffff;
+    font-family:arial;
+    font-size:15px;
+    font-weight:bold;
+    padding:6px 24px;
+    text-decoration:none;
+    text-shadow:1px 1px 0px #528ecc;
+}
+#detailView #checkOutButton:hover {
+     background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #378de5), color-stop(1, #79bbff) );
+     background:-moz-linear-gradient( center top, #378de5 5%, #79bbff 100% );
+     filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#378de5', endColorstr='#79bbff');
+     background-color:#378de5;
+}
+
+#detailView #checkOutButton:active {
+      position:relative;
+      top:1px;
+}
+
+
+
+@media only screen and (min-device-width : 1024px) and (max-width: 600px) {
+    #gridView table .optional { display: none; }
+    #gridView table .carrierDescription { display: none; }
+    #gridView table .productDescription { display: none; }
+}
+
+@media only screen and (min-device-width : 1024px) and (max-width: 480px) {
+    #gridView table .optional { display: none; }
+    #gridView table .carrierDescription { display: none; }
+    #gridView table .productDescription { display: none; }
+    #gridView table .targetWeight { display: none; }
+    #detailView input[type=button] { width: 100%; margin-bottom: 0.25em; }
+}
+
+
+@media only screen and (max-device-width: 960px) and (orientation: landscape) {
+}
+
+@media screen
+and (min-device-width : 320px)
+and (max-device-width : 480px)
+and (orientation: portrait) {
+    #gridView table .carrierDescription { display: none; }
+    #gridView table .productDescription { display: none; }
+    #gridView table .targetWeight { display: none; }
+    #detailView input[type=button] { width: 100%; margin-bottom: 0.25em; }
+    #gridView table tr { height: 2em; }
+}
+
+@media screen
+and (min-device-width : 320px)
+and (max-device-width : 480px)
+and (orientation: landscape) {
+    #gridView table .carrierDescription { display: none; }
+    #gridView table .productDescription { display: none; }
+    #gridView table tr { height: 2em; }
+}
